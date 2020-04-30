@@ -1,0 +1,49 @@
+<%- include('partials/header') -%>
+<body style="background-image: url(https://image.freepik.com/free-photo/filled-miniature-cart-with-paper-shopping-bags-front-pink-background_23-2147892202.jpg); background-repeat: no-repeat;  background-size:cover ; position: relative;">
+    <p style="text-align: center;">WELCOME,YOU ARE LOGGED IN</p>
+<div class="container">
+    <div class="jumbotron">
+
+    <h1 style="text-align: center;">YOUR SHOPPING CART</h1>
+</div>
+
+<% var sum=0 ; %>
+<div class="row text-center" style="display: flex; flex-wrap:wrap ; size: 50%;">
+    <% carts.forEach(function(cart){ %>
+        <div class="col-md-4 col-sm-6">
+        <div class="thumbnail">    
+                    <img src="<%=cart.image%>" >
+                  
+                    <h4><%= cart.name %></h4>
+                    
+                    <h5>$<%= cart.price %><% var num= cart.price %><% sum=(sum+num) %></h5>
+                    <form action="/cart/<%=cart._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-primary btn-large">DELETE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+               
+                 <% }) %>
+                </div>
+
+                <div class="text-center">
+                <form action="/shop" method="GET">
+                    <input type="submit" class="btn btn-primary btn-large" value="SHOP NOW">
+                    </form>
+
+                    <br>
+                    <br>
+                 <form action="/info" method="GET">
+                <input type="submit" class="btn btn-primary btn-large" value="BUY NOW">
+                </form>
+            </div>
+                
+                 
+                <h5 style="text-align: center; color: red;">YOUR TOTAL IS : <%= sum %></h5>
+                 <%  console.log (sum); %>
+
+                 <%- include('partials/footer') -%>
+
+    
+   

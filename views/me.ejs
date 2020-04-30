@@ -1,0 +1,74 @@
+<%- include('partials/header') -%>
+<style>
+  .jumbotron{
+     margin-top: 20px;
+     background-image: url("https://sproose.ie/wp-content/uploads/2019/10/istockphoto-868718238-612x612.jpg");
+     background-size: cover;
+  }
+
+  .square {
+  position: relative;
+  width: 50%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+.text-box {
+        position: absolute;
+        margin:auto 0;
+        text-align:center;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+}
+.span{
+  size: 100px;
+}
+
+   </style>
+    <body  style="background-image: url(https://cdn.choosechicago.com/uploads/2019/06/neighborhood-boutiques-1800x900.jpg); background-repeat: no-repeat; background-size:cover ; position: relative;">
+        
+        
+        <div class="container">
+            <div class="jumbotron">
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:black;"><strong>Miss Shopaholic</strong></h1>
+        <h3 style="color: darkblue;"><strong> SHOP TO YOUR FULLEST</h3></strong>
+      </div>
+      <br>   
+      <br>
+      <div class="row">
+      <div class="col-md-5 col-sm-12 text-box">
+      <span><i class="fa fa-quote-left fa"></i></span>
+          <p>“When you shop, the world gets better, and the world is better, but then it's not, and then you need to do it again.”
+           ― Sophie Kinsella!!</p>
+           <p>This online women shopping website MISS SHOPAHOLIC ,brings before you all the exclusive 
+           outfits which one can find across.
+           You just have to scroll,click,choose and order!
+           Shop to your fullest and enjoy!!</p>
+           <p>So,don't wait and shop now!!</p>
+           <form action="/shop">
+            <input type="submit" class="btn btn-primary btn-large"  value="SHOP NOW">
+            </form>
+      
+          </div>
+        </div>
+      </div>
+      
+      
+<%- include('partials/footer') -%>
+
+
+
+

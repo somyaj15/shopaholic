@@ -1,0 +1,23 @@
+<%- include('partials/header') -%>
+<body style="background-image :url(https://st2.depositphotos.com/5980642/9294/i/950/depositphotos_92942258-stock-photo-sea-shells-on-sand-summer.jpg); background-repeat: no-repeat; background-size:cover ; position: relative;)"  ></body>
+<h1 style="text-align: center;"><strong> A  QUICK GLANCE</strong></h1>
+<br>
+<br>
+<br>
+
+
+<div class="col-md-9">
+    <div class="thumbnail" style="align-self:center;">
+        <img class="img-responsive" src="<%= shop.image %>">
+        <div class="caption-full" >
+            <h4 class="pull-right"><strong>$<%=shop.price%></strong></h4>
+            <h4><strong><%=shop.name%></strong></h4>
+            <p><%=shop.description%></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include('partials/footer') -%>
