@@ -9,9 +9,9 @@ var User=require("./models/user");
 var Cart=require("./models/cart");
 var mongoose=require("mongoose");
 
-// mongoose.connect("mongodb://localhost/shopdb");
+ // mongoose.connect("mongodb://localhost/shopdb" );
 
-mongoose.connect("mongodb+srv://somya:parents1@shop-njasf.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://somya:parents1@shop-njasf.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true});
 
 
 
